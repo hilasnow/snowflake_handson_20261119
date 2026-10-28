@@ -12,6 +12,6 @@ CREATE OR REPLACE API INTEGRATION ai_handson_git_integration
 
 CREATE OR REPLACE GIT REPOSITORY ai_handson_git_repo
     API_INTEGRATION = ai_handson_git_integration
-    ORIGIN           = 'https://github.com/hilasnow/snowflake_ai_handson_20260924.git';
+    ORIGIN           = 'https://github.com/hilasnow/snowflake_handson_20261119.git';
 
 ALTER GIT REPOSITORY ai_handson_git_repo FETCH;
