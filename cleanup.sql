@@ -1,13 +1,23 @@
 -- =============================================================
 -- cleanup.sql - ハンズオン環境クリーンアップ
 --
--- Part 1〜3 で作成したオブジェクトをまとめて削除します。
+-- Part 1〜4 で作成したオブジェクトをまとめて削除します。
 -- ハンズオン終了後に実行してください。
 -- =============================================================
 USE ROLE ACCOUNTADMIN;
 
 -- -----------------------------------------------
 -- Part 1 で作成したオブジェクト
+--   CoCo の「テストデータ生成」で作ったテーブルは、名前が人によって異なります。
+--   create_influencer_data.sql 末尾の DROP TABLE を実行するか、
+--   作成したテーブル名に合わせて以下のコメントを外して実行してください。
+--   (DATABASE ごと削除するため、実行しなくても下の DROP DATABASE で消えます)
+-- -----------------------------------------------
+-- DROP TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.influencers;
+-- DROP TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.influencer_posts;
+
+-- -----------------------------------------------
+-- Part 2 で作成したオブジェクト
 -- -----------------------------------------------
 DROP DYNAMIC TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.DT_HASHTAG_SUMMARY;
 DROP DYNAMIC TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.DT_SNS_HASHTAGS;
@@ -15,13 +25,13 @@ DROP TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.sns_mentions_dev;
 DROP WAREHOUSE IF EXISTS AI_HANDSON_ADAPTIVE_WH;
 
 -- -----------------------------------------------
--- Part 2 で作成したオブジェクト
+-- Part 3 で作成したオブジェクト
 -- -----------------------------------------------
 DROP TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.image_features;
 DROP TABLE IF EXISTS AI_HANDSON_DB.ANALYTICS.work_ai_similarity_match;
 
 -- -----------------------------------------------
--- Part 3 で作成したオブジェクト
+-- Part 4 で作成したオブジェクト
 -- -----------------------------------------------
 DROP CORTEX SEARCH SERVICE IF EXISTS AI_HANDSON_DB.ANALYTICS.product_spec_search;
 DROP SEMANTIC VIEW IF EXISTS AI_HANDSON_DB.ANALYTICS.SV_STEP1;

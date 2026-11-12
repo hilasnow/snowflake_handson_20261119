@@ -1,7 +1,7 @@
 # 商品スペックシートPDF 置き場
 
 このフォルダに、商品スペックシートのPDF(5商品分)を配置します。
-Part3 の Cortex Search セクションで `AI_PARSE_DOCUMENT` によるテキスト抽出 → チャンク分割 → Cortex Search Service 構築に使用します。
+Part4 の Cortex Search セクションで `AI_PARSE_DOCUMENT` によるテキスト抽出 → チャンク分割 → Cortex Search Service 構築に使用します。
 
 ## ステータス
 
